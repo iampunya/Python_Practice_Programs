@@ -1,0 +1,13 @@
+def horizontal_line():
+    print(" ---" * board_size)
+
+def vertical_line():
+    print("|   " * (board_size-1)*2)
+    
+if __name__ == "__main__":
+    board_size = int(input("enter the size of the game board:"))
+    
+    for i in range(board_size):
+        horizontal_line()
+        vertical_line()
+    horizontal_line()
