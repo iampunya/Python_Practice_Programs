@@ -1,0 +1,21 @@
+import random
+number = int(input("Guess a number that you think is the admins number: "))
+playing = True
+guesses = 1
+start_number = 0
+end_number = 100
+while(playing):
+    admins_number = random.randint(start_number, end_number)
+    print(admins_number)
+    if number < admins_number:
+        print("you are too high!")
+        end_number = admins_number
+    elif number > admins_number:
+        print("you are too low")
+        start_number = admins_number
+    else:
+        print("you guessed it right!")
+        break
+    guesses+=1
+    
+print(f"you have taken {str(guesses)} chances to guess the correct answer")
