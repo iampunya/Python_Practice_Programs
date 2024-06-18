@@ -1,0 +1,34 @@
+import random
+
+def compare_choices(number, user_choice):
+    cow_count = 0
+    for i in range (len(number)):
+        if number[i] == user_choice[i]:
+            cow_count += 1
+        
+    return cow_count
+    
+if __name__ == "__main__":
+    playing = True 
+    number = str(random.randint(0,9999))
+    guesses = 0
+    
+    print("Lets play a number guessing game!")
+    print("You have to enter a 4 digit number")
+    print("For every correct digit guess you will get a cow and bull for a wrong guess.")
+    print("Lets see on how many guesses you will get the correct one ;)")
+    
+    while playing:
+        user_choice = input("enter a number: ")
+        if user_choice == "exit":
+            break
+        cowbullcount = compare_choices(number, user_choice)
+        guesses+=1
+        
+        print(f"you have {str(cowbullcount)} cows and you have {str(4-cowbullcount)} bulls")
+        
+        if cowbullcount == 4:
+            print(f"you won the game! after {str(guesses)} guesses and the number was {str(number)}")
+            break
+        else: 
+            print(f"your guess was not correct. Try again!!")
