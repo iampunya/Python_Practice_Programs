@@ -1,0 +1,10 @@
+import math
+
+number = input("enter a number to if it is a prime number: ")
+number = int(number)
+for i in range(2, int(math.sqrt(number)) + 1):
+    if number % i == 0:
+        print("it is not a prime number")
+        break
+else:
+        print("it is a prime number")
