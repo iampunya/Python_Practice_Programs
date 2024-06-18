@@ -1,0 +1,11 @@
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+
+lessNums = []
+number = int(input("enter a number: "))
+
+for n in a:
+    if n < number:
+        lessNums.append(n)
+        lessNums.sort()
+    
+print (lessNums)
