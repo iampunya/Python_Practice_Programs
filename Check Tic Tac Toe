@@ -1,0 +1,24 @@
+def results(grid):
+      
+      for x in range(0, 3):
+        row = set([grid[x][0],grid[x][1],grid[x][2]])
+        if len(row) == 1 and grid[x][0] != 0:
+            return grid[x][0]
+            
+        for x in range(0,3):
+            column =  set([grid[0][x],grid[1][x],grid[2][x]])
+            if len(column) == 1 and grid[0][x] != 0:
+                return grid[0][x]
+            
+        diagonal1 = set([grid[0][0],grid[1][1],grid[2][2]])
+        diagonal2 = set([grid[0][2],grid[1][1],grid[2][0]])
+        if len(diagonal1) == 1 or len(diagonal2) == 1 and grid[1][1] != 0:
+            return grid[1][1]
+            
+        return 0
+    
+winner_is_1 = [[1, 2, 2],
+	[1, 1, 0],
+	[1, 1, 0]]
+	
+print(f" winner is player{results(winner_is_1)}")
