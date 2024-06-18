@@ -1,0 +1,10 @@
+a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+new_list = []
+length = len(a)
+for i in range(len(a)):
+    if a[i] % 2 == 0:
+        new_list.append(a[i])
+    else:
+        pass
+    
+print(new_list)
