@@ -1,0 +1,7 @@
+list = [5, 10, 15, 20, 25, 30]
+
+length = len(list)
+
+new_list = (list[0], list[length-1])
+
+print(f"new list = {new_list}")
