@@ -1,0 +1,18 @@
+def get_fib():
+    number = int(input("enter a number to get the Fibonacci list: "))
+    i = 1
+    Fibonacci = []
+    if number == 0:
+        Fibonacci = []
+    elif number == 1:
+        Fibonacci = [1]
+    elif number == 2:
+        Fibonacci = [1,1]
+    elif number > 2:
+        Fibonacci = [1,1]
+        while i < (number - 1):
+            Fibonacci.append(Fibonacci[i] + Fibonacci[i-1])
+            i += 1
+    return Fibonacci
+
+print(get_fib())
