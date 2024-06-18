@@ -1,0 +1,28 @@
+player1 = input("enter player 1 name: ")
+player2 = input("enter player 2 name: ")
+
+choice1 = input(f"{player1} select your choice among rock, paper and scissor: ")
+choice2 = input(f"{player2} select your choice among rock, paper and scissor: ")
+
+def compare(choice1, choice2):
+    if choice1 == choice2:
+        print("game is a tie")
+    elif choice1 == 'rock':
+        if choice2 == 'scissorr':
+            print("rock won!")
+        else:
+            print("paper won!")
+    elif choice1 == 'scissor':
+        if choice2 == 'paper':
+            print("scissor won!")
+        else:
+            print("rock won!")
+    elif choice1 == 'paper':
+        if choice2 == 'rock':
+            print("paper won!")
+        else:
+            print("scissor won")
+    else:
+        print("you have selected a wrong option. Try again:(")
+        
+compare(choice1, choice2)
